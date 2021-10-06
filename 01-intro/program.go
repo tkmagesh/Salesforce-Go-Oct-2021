@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+//unused variables at package level are permitted (NOT AT FUNCTION LEVEL)
+var no int
+
 func main() {
 	/*
 		var str string
@@ -119,4 +122,16 @@ func main() {
 	)
 
 	fmt.Println(red, green, blue)
+
+	//type conversions (explicit)
+	var a int = 100
+	var b float32
+
+	b = float32(a)
+	fmt.Println(a, b)
+
+	var myVar int
+	myVar = 100
+	fmt.Println("Value of myVar = ", myVar)
+
 }
