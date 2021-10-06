@@ -94,3 +94,10 @@ Data Types in Golang
 
     byte (alias for uint8)
     rune (alias for int32) (represent unicode code point (character))
+
+Program Constructs
+    if
+    for
+    switch
+    select
+
