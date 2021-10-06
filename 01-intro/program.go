@@ -82,4 +82,41 @@ func main() {
 
 	x, y, msg := 100, 200, "Result :"
 	fmt.Println(msg, x+y)
+
+	//constants
+	const pi = 3.14
+
+	//iota
+	/*
+		const (
+			red   = iota
+			green = iota
+			blue  = iota
+		)
+	*/
+
+	/*
+		const (
+			red = iota
+			green
+			blue
+		)
+	*/
+
+	/*
+		const (
+			red = iota + 2
+			green
+			blue
+		)
+	*/
+
+	const (
+		red = iota + 2
+		green
+		_
+		blue
+	)
+
+	fmt.Println(red, green, blue)
 }
