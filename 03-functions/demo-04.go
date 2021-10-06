@@ -41,6 +41,7 @@ func subtract(x, y int) int {
 
 func logPerform(op func(int, int) int, x, y int) {
 	fmt.Println("Before invocation:")
-	fmt.Println(op(x, y))
+	result := op(x, y)
+	fmt.Println(result)
 	fmt.Println("After invocation:")
 }
