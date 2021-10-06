@@ -19,7 +19,7 @@ func subtract(x, y int) int {
 	return x - y
 }
 
-func logPerform(op func(int, int) int) func(x, y int) {
+func logPerform(op func(int, int) int) func(int, int) {
 	return func(x, y int) {
 		fmt.Println("Before invocation:")
 		result := op(x, y)
