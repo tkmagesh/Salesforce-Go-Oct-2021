@@ -1,0 +1,71 @@
+Magesh Kuppan
+
+About You
+Name
+Primary Skillset
+Experience in Go (if any)
+
+Schedule:
+    Session 1 : 1:30 Hrs
+    Tea break : 20 mins
+    Session 2 : 1:30 Hrs
+    Lunch Break : 1 Hr
+    Session 3 : 1:30 Hrs
+    Tea break : 20 mins
+    Session 4 : 1:30 Hrs    
+
+
+Why Golang?
+    1. Simpler
+    2. Concurrency
+    3. Statical typing
+    4. Performance (on par with 'c')
+    5. Solutions in one way
+    6. A language for the current times
+
+    1. Simplicity
+        a. Only 25 keywords
+        b. No access modifiers (public, private etc)
+        c. No exceptions (only errors)
+        d. No Classes (only structs & functions)
+        e. No Inheritance (only composition)
+        f. No Generics 
+
+    2. Performance
+        On par 'c' language
+        Builtin in Garbage Collector
+        Builtin concurrency scheduler
+
+    3. Built for concurrency
+        Language features
+            go, chan (data type), <- operator, range, select
+        Builtin Scheduler
+        OS thread - 8 MB RAM
+        Goroutine - 4 KB RAM
+
+
+Paradox of Choice
+    Barry Schwartz
+
+function fn(){
+
+}
+
+var t = new System.Threading.Thread(fn)
+t.Start()
+
+func f1(){
+
+}
+
+func f2(){
+
+}
+
+func fn(){
+    go f1() //goroutines
+    f2()
+}
+
+go version
+JetBrains GoLand (IDE)
