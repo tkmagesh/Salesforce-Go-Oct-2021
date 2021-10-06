@@ -69,3 +69,28 @@ func fn(){
 
 go version
 JetBrains GoLand (IDE)
+
+Data Types in Golang
+    bool
+    string
+
+    int
+    int8
+    int16
+    int32
+    int64
+
+    uint
+    uint8
+    uint16
+    uint32
+    uint64
+
+    float32
+    float64
+
+    complex64 (real float32, imaginary float32)
+    complex128 (real float64, imaginary float64)
+
+    byte (alias for uint8)
+    rune (alias for int32) (represent unicode code point (character))
