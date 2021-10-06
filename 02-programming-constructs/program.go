@@ -76,7 +76,10 @@ func main() {
 		fmt.Println(newNo, " is odd")
 	}
 
-	no := 4
+	//no := 4
+	var no int
+	fmt.Print("Enter a number: ")
+	fmt.Scanf("%d", &no)
 	switch no {
 	case 0:
 		fmt.Println(" is zero")
