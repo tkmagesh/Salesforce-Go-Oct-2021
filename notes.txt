@@ -104,3 +104,7 @@ Program Constructs
 
 Functions
     1. variadic functions are supported
+    2. Higher order functions
+        Functions can be assigned as values to variables
+        Functions can be passed as arguments to other functions
+        Functions can be returned by other functions
