@@ -101,3 +101,6 @@ Program Constructs
     switch
     select
 
+
+Functions
+    1. variadic functions are supported
