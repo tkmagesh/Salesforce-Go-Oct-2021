@@ -118,3 +118,29 @@ Collections
             append() => to add new elements to the slice
     Map
         Collection of key value pairs
+
+
+Modularity
+    Modules
+    Packages
+
+    Before Go 1.13
+    $GOPATH
+        bin
+        pkg
+        src
+            github.com
+                tkmagesh
+                    myapp
+                        main.go 
+                            import github.com/tkmagesh/myapp/pk1
+                        pk1
+                            calc.go
+                        pk2
+                            utils.go
+                        go.mod
+                            moduleName
+                            target runtime version
+                            references to other modules that the application depends on
+
+    go mod init <module_name>
