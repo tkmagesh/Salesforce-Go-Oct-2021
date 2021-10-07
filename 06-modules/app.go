@@ -4,15 +4,14 @@ import (
 	"fmt"
 	calculator "modularity-demo/calc"
 	"modularity-demo/calc/utils"
+
+	"github.com/fatih/color"
 )
 
 func main() {
-	fmt.Println(calculator.Add(1, 2))
-	fmt.Println(calculator.Subtract(1, 2))
-	fmt.Println(calculator.Subtract(1, 2))
-	fmt.Println(calculator.Subtract(1, 2))
-
-	fmt.Println(calculator.GetOpCount())
+	color.Red(fmt.Sprintln(calculator.Add(1, 2)))
+	color.Blue(fmt.Sprintln(calculator.Subtract(1, 2)))
+	color.Green(fmt.Sprintln(calculator.Subtract(1, 2)))
 
 	fmt.Println(utils.IsEven(100))
 }
