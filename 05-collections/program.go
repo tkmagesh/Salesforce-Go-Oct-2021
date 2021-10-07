@@ -107,4 +107,44 @@ func main() {
 	fmt.Println("products[2:5] => ", productsSlice)
 	fmt.Println(cap(products), cap(productsSlice))
 
+	//Maps
+
+	fmt.Println("Maps")
+	//productRanks := map[string]int{}
+	//productRanks := make(map[string]int)
+	productRanks := map[string]int{
+		"Pen":    3,
+		"Pencil": 1,
+		"Marker": 2,
+	}
+	fmt.Println(productRanks)
+
+	//accessing a value using the key
+	fmt.Println("Rank of Pencil =>", productRanks["Pencil"])
+
+	//adding a new key-value pair
+	productRanks["Scribble-Pad"] = 5
+	fmt.Println(productRanks)
+
+	//iteration using range
+	fmt.Println("iteration using range")
+	for key, value := range productRanks {
+		fmt.Println(key, value)
+	}
+
+	//checking if a key exists
+	fmt.Println("Checking if a key exists")
+	//rank, exists := productRanks["Pen"]
+	//fmt.Println("Rank of Pen =>", rank, "Exists =>", exists)
+
+	if rank, exists := productRanks["Stapler"]; exists {
+		fmt.Println("Rank of Stapler =>", rank, "Exists =>", exists)
+	} else {
+		fmt.Println("Rank of Stapler =>", "Not Found")
+	}
+
+	//deleting a key-value pair
+	fmt.Println("Deleting a key-value pair")
+	delete(productRanks, "Pen")
+	fmt.Println(productRanks)
 }

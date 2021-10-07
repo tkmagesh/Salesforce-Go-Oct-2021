@@ -117,3 +117,4 @@ Collections
             len()
             append() => to add new elements to the slice
     Map
+        Collection of key value pairs
