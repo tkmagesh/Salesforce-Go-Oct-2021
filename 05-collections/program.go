@@ -27,4 +27,84 @@ func main() {
 	fmt.Println(newNos)
 	newNos[0] = 200
 	fmt.Println(newNos, nos)
+
+	//Slices
+	fmt.Printf("\nSlice\n")
+
+	/*
+		var products []string
+		fmt.Printf("%#v, len = %d, cap = %d\n", products, len(products), cap(products))
+		products = append(products, "Pen")
+		fmt.Printf("%#v, len = %d, cap = %d\n", products, len(products), cap(products))
+		products = append(products, "Pencil")
+		fmt.Printf("%#v, len = %d, cap = %d\n", products, len(products), cap(products))
+		products = append(products, "Marker", "Scribble-Pad", "Sharpner")
+		fmt.Printf("%#v, len = %d, cap = %d\n", products, len(products), cap(products))
+	*/
+
+	//var products []string = []string{"Pen", "Pencil", "Marker"}
+	var products []string = make([]string, 2, 5)
+	products[0] = "Pen"
+	products[1] = "Pencil"
+	//products[2] = "Marker"
+	products = append(products, "Marker")
+	//products = append(products, "Pen", "Pencil", "Marker")
+	fmt.Printf("%#v, len = %d, cap = %d\n", products, len(products), cap(products))
+	products = append(products, "Scribble-Pad")
+	fmt.Printf("%#v, len = %d, cap = %d\n", products, len(products), cap(products))
+	products = append(products, "Sharpner", "Stapler")
+	fmt.Printf("%#v, len = %d, cap = %d\n", products, len(products), cap(products))
+	products = append(products, "Stapler-Pins")
+	fmt.Printf("%#v, len = %d, cap = %d\n", products, len(products), cap(products))
+
+	/*
+		newProducts := append(products, "P1", "P2")
+		fmt.Println(products, newProducts)
+
+		products[0] = "Dummy Product"
+		fmt.Println(products, newProducts)
+
+		products = append(products, "Mouse")
+		fmt.Println()
+		fmt.Println(products, newProducts)
+	*/
+	/*
+		//iteration using indexer
+		fmt.Println("iteration using indexer")
+		for idx := 0; idx < len(products); idx++ {
+			fmt.Println(products[idx])
+		}
+
+		//iteration using range
+		fmt.Println("iteration using range")
+		for _, value := range products {
+			fmt.Println(value)
+		}
+	*/
+
+	//copy of a slice
+	/*
+		n := []int{1, 2, 3}
+		n2 := make([]int, 3)
+		copy(n2, n)
+		fmt.Println(n, n2)
+		n[0] = 100
+		fmt.Println(n, n2)
+	*/
+
+	//slicing a slice
+	/*
+		[lo : hi] => from index lo to hi-1
+		[lo : ] => from index lo to end
+		[ : hi] => from 0 to hi-1
+		[lo : lo] => []
+		[lo : lo+1] => [lo]
+		[:] => from start to end
+	*/
+	fmt.Println("Slicing a slice")
+	fmt.Println(products)
+	productsSlice := products[2:5]
+	fmt.Println("products[2:5] => ", productsSlice)
+	fmt.Println(cap(products), cap(productsSlice))
+
 }

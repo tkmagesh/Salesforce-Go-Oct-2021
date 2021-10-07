@@ -113,4 +113,7 @@ Collections
     Array
         Fixed length collection of data of the same type
     Slice
+        Varying sized collection of data of the same type
+            len()
+            append() => to add new elements to the slice
     Map
