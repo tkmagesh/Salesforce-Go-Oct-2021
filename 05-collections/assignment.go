@@ -10,17 +10,27 @@ func main() {
 	*/
 	/*  Hint: use strings.Split() to split the string to words */
 	words := strings.Split(str, " ")
+	wordCountBySize := getSordCountBySize(words)
+	maxWordSize, maxOccurance := getMaxWordSizeByOccurance(wordCountBySize)
+	println(maxWordSize, maxOccurance)
+}
+
+func getSordCountBySize(words []string) map[int]int {
 	wordCountBySize := make(map[int]int)
 	for _, word := range words {
 		wordCountBySize[len(word)]++
 	}
+	return wordCountBySize
+}
+
+func getMaxWordSizeByOccurance(wordCountBySize map[int]int) (int, int) {
 	maxWordSize := 0
 	maxOccurance := 0
-	for size, occurance := range wordCountBySize {
+	for wordSize, occurance := range wordCountBySize {
 		if occurance > maxOccurance {
-			maxWordSize = size
+			maxWordSize = wordSize
 			maxOccurance = occurance
 		}
 	}
-	println(maxWordSize, maxOccurance)
+	return maxWordSize, maxOccurance
 }
