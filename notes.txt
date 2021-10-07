@@ -108,3 +108,9 @@ Functions
         Functions can be assigned as values to variables
         Functions can be passed as arguments to other functions
         Functions can be returned by other functions
+
+Collections
+    Array
+        Fixed length collection of data of the same type
+    Slice
+    Map
