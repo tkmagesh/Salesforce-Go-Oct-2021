@@ -165,3 +165,10 @@ Modularity
 
 Concurrency
     go, chan data type, <- channel operator, range, select
+
+Unit Testing
+    To run the tests
+        go test -v ./...
+
+    to run the benchmarks
+        go test -v ./... -bench=.
