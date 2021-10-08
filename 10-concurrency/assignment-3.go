@@ -1,4 +1,8 @@
 /* Using the "select" construct */
+
+/*
+Assignment
+*/
 package main
 
 import (
