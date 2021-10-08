@@ -10,18 +10,21 @@ import (
 
 func main() {
 	ch := make(chan int)
-	go fibonacci(ch)
+	done := make(chan string)
+	go fibonacci(ch, done)
+	go func() {
+		var input string
+		fmt.Scanln(&input)
+		done <- "done"
+	}()
 	for no := range ch {
 		fmt.Println(no)
 	}
 	fmt.Println("Exiting from main")
 }
 
-func fibonacci(ch chan int) {
+func fibonacci(ch chan int, done chan string) {
 	defer close(ch)
-
-	done := time.After(20 * time.Second)
-
 	x, y := 0, 1
 	for {
 		select {
