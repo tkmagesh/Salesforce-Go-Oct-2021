@@ -7,9 +7,20 @@ import (
 	"sync"
 )
 
-var result int
+type Result struct {
+	value int
+	sync.Mutex
+}
 
-var mutex sync.Mutex
+func (r Result) SetValue(val int) {
+	r.Lock()
+	{
+		r.value = val
+	}
+	r.Unlock()
+}
+
+var result Result
 
 func main() {
 
@@ -19,14 +30,10 @@ func main() {
 	wg.Add(1)
 	go add(100, 200, wg)
 	wg.Wait()
-	fmt.Println(result)
+	fmt.Println(result.value)
 }
 
 func add(x, y int, wg *sync.WaitGroup) {
-	mutex.Lock()
-	{
-		result = x + y
-	}
-	mutex.Unlock()
+	result.SetValue(x + y)
 	wg.Done()
 }
