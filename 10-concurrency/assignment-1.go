@@ -10,7 +10,7 @@ var wg sync.WaitGroup
 
 func main() {
 	wg.Add(2)
-	ch1 := make(chan string)
+	ch1 := make(chan string, 1) //fix for the deadlock
 	ch2 := make(chan string)
 	go printString("Hello", ch1, ch2)
 	go printString("World", ch2, ch1)
