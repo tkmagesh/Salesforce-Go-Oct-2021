@@ -1,3 +1,8 @@
+
+================================================
+Submit the form at https://forms.gle/gTJwnshuJWAk3u6z9 for recordings
+================================================
+
 Magesh Kuppan
 
 About You
@@ -156,3 +161,7 @@ Modularity
 
     go mod vendor
         to localize the dependencies
+
+
+Concurrency
+    go, chan data type, <- channel operator, range, select
