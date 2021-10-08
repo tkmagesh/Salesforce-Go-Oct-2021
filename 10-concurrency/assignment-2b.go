@@ -23,6 +23,11 @@ func main() {
 		ch <- sum(nos...)
 	}(ch, dataSet2)
 
+	/*
+		result1 := <-ch
+		result2 := <-ch
+		result := result1 + result2
+	*/
 	result := <-ch + <-ch
 	fmt.Println(result)
 }
