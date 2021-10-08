@@ -4,27 +4,24 @@ package main
 
 import (
 	"fmt"
-	"sync"
 	"time"
 )
 
-var wg sync.WaitGroup
-
 func main() {
-	wg.Add(1)
+
 	ch := make(chan int)
 	go add(100, 200, ch)
+	time.Sleep(5 * time.Second)
 	result := <-ch //reading the result from the channel
 	fmt.Println(result)
-	wg.Wait()
 	fmt.Println("Exiting main")
 }
 
 func add(x, y int, ch chan int) {
-	time.Sleep(2 * time.Second)
 	result := x + y
+	fmt.Println("attempting to write the result to the channel")
 	ch <- result //writing the result to the channel
-	wg.Done()
+	fmt.Println("result written to the channel")
 }
 
 /*
