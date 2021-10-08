@@ -2,10 +2,12 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	ch := make(chan int)
+	ch := make(chan int, 2)
 	go writeData(ch)
 	fmt.Println("[@main] Attempting to read 10")
 	fmt.Println(<-ch)
